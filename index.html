@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>座長・演者の方へ | 第35回福岡県理学療法士学会</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+            line-height: 1.8;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+
+        a {
+            color: #2f7dbd;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .page-header {
+            background-image: url("https://gakkai35.fukuoka-pt.jp/wp-content/uploads/2025/12/no-text-visual-scaled.jpg");
+            background-size: cover;
+            background-position: center;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .page-header::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(33, 52, 74, 0.28);
+        }
+
+        .page-header h1 {
+            position: relative;
+            margin: 0;
+            color: #fff;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+        }
+
+        .breadcrumb-wrap {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e8ec;
+        }
+
+        .breadcrumb {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 14px 20px;
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        .breadcrumb span {
+            margin: 0 6px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 48px auto 72px;
+            padding: 0 20px;
+        }
+
+        .intro-box {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 32px;
+            margin-bottom: 28px;
+            box-shadow: 0 6px 20px rgba(21, 45, 78, 0.08);
+        }
+
+        .intro-box p {
+            margin: 0;
+            font-size: 15px;
+            color: #4b5563;
+        }
+
+        .day-section {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 32px;
+            box-shadow: 0 6px 20px rgba(21, 45, 78, 0.08);
+        }
+
+        .day-header {
+            margin-bottom: 24px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid #e7edf4;
+        }
+
+        .day-label {
+            display: inline-block;
+            background: #eaf4fc;
+            color: #2f7dbd;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            padding: 6px 10px;
+            border-radius: 999px;
+            margin-bottom: 12px;
+        }
+
+        .day-title {
+            margin: 0 0 8px;
+            font-size: 28px;
+            line-height: 1.4;
+            color: #21446a;
+        }
+
+        .day-subtitle {
+            margin: 0;
+            font-size: 15px;
+            color: #5b6573;
+        }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .session {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 24px 24px 22px;
+            box-shadow: 0 6px 20px rgba(21, 45, 78, 0.06);
+            border: 1px solid #e6edf5;
+            border-top: 5px solid #2f7dbd;
+        }
+
+        .session.full {
+            grid-column: 1 / -1;
+        }
+
+        .session h2 {
+            margin: 0 0 14px;
+            font-size: 20px;
+            line-height: 1.4;
+            color: #21446a;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e7edf4;
+        }
+
+        .session .title {
+            margin: 0 0 14px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #2f7dbd;
+        }
+
+        .session .lecturer {
+            margin: 0 0 12px;
+            font-size: 15px;
+            color: #374151;
+        }
+
+        .speaker-list {
+            margin: 10px 0 0;
+            padding-left: 1.2em;
+            color: #374151;
+        }
+
+        .speaker-list li {
+            margin-bottom: 6px;
+        }
+
+        .note-box {
+            margin-top: 28px;
+            background: #eef5fb;
+            border-left: 4px solid #2f7dbd;
+            border-radius: 10px;
+            padding: 18px 20px;
+            font-size: 14px;
+            color: #4b5563;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            margin-top: 12px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            color: #374151;
+            background: #ffffff;
+        }
+
+        th,
+        td {
+            border: 1px solid #e6edf5;
+            padding: 12px 14px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #eaf4fc;
+            color: #21446a;
+            font-weight: 700;
+        }
+
+        .poster-image-wrap {
+            margin: 18px auto 22px;
+            text-align: center;
+        }
+
+        .poster-image-wrap img {
+            max-width: 360px;
+            width: 100%;
+            height: auto;
+            border: 1px solid #e6edf5;
+            border-radius: 10px;
+            background: #ffffff;
+            box-shadow: 0 6px 20px rgba(21, 45, 78, 0.06);
+        }
+
+        @media (max-width: 900px) {
+            .program-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+
+            .page-header {
+                min-height: 140px;
+            }
+
+            .page-header h1 {
+                font-size: 24px;
+            }
+
+            .container {
+                margin-top: 24px;
+                margin-bottom: 40px;
+                padding: 0 16px;
+            }
+
+            .intro-box,
+            .day-section {
+                padding: 20px 16px;
+            }
+
+            .day-title {
+                font-size: 22px;
+            }
+
+            .day-subtitle {
+                font-size: 14px;
+            }
+
+            .program-grid {
+                gap: 16px;
+            }
+
+            .session {
+                padding: 18px 16px 16px;
+            }
+
+            .session h2 {
+                font-size: 16px;
+            }
+
+            .session .title {
+                font-size: 14px;
+            }
+
+            .session .lecturer,
+            .speaker-list {
+                font-size: 14px;
+            }
+
+            .note-box {
+                padding: 16px 18px;
+                font-size: 13px;
+            }
+
+            table {
+                font-size: 13px;
+            }
+
+            th,
+            td {
+                padding: 10px 12px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .intro-box p {
+                font-size: 13px;
+            }
+
+            .day-subtitle {
+                font-size: 13px;
+            }
+
+            .session .title {
+                font-size: 14px;
+            }
+
+            .session .lecturer,
+            .speaker-list li {
+                font-size: 13px;
+            }
+
+            .note-box {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="page-header">
+    <h1>座長・演者の方へ</h1>
+</header>
+
+<div class="breadcrumb-wrap">
+    <div class="breadcrumb">
+        <a href="https://gakkai35.fukuoka-pt.jp/">HOME</a>
+        <span>›</span>
+        <span>座長・演者の方へ</span>
+    </div>
+</div>
+
+<main class="container">
+
+    <section class="intro-box">
+        <p>
+            第35回福岡県理学療法士学会2026における座長・演者の皆様へのご案内です。<br>
+            受付、発表データの提出、セッション進行、ポスター掲示、利益相反（COI）開示等について、事前にご確認ください。
+        </p>
+    </section>
+
+    <section class="day-section">
+        <div class="day-header">
+            <div class="day-label">PRESENTATION STYLE</div>
+            <h2 class="day-title">発表形式について</h2>
+            <p class="day-subtitle">
+                セッション分類ごとの発表時間・質疑応答時間は以下の通りです。
+            </p>
+        </div>
+
+        <div class="program-grid">
+            <div class="session full">
+                <h2>発表時間</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>発表方法</th>
+                                <th>セッション分類</th>
+                                <th>発表時間</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>口述発表</td>
+                                <td>セレクション演題（口述・症例報告）</td>
+                                <td>発表7分、質疑応答5分</td>
+                            </tr>
+                            <tr>
+                                <td>口述発表</td>
+                                <td>一般演題</td>
+                                <td>発表7分、質疑応答3分</td>
+                            </tr>
+                            <tr>
+                                <td>ポスター発表</td>
+                                <td>セレクション演題</td>
+                                <td>発表3分、質疑応答2分、自由討論25分</td>
+                            </tr>
+                            <tr>
+                                <td>ポスター発表</td>
+                                <td>一般演題</td>
+                                <td>発表3分、質疑応答2分、自由討論20分</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="session">
+                <h2>表彰について</h2>
+                <p class="title">閉会式にて各賞の表彰を行います</p>
+                <p class="lecturer">
+                    最優秀賞、大会長賞、奨励賞、ケースレポートアワード、ベストポスター賞の表彰を行います。
+                </p>
+            </div>
+
+            <div class="session">
+                <h2>閉会式への参加</h2>
+                <p class="title">セレクション演題の演者は必ずご参加ください</p>
+                <p class="lecturer">
+                    セレクション演題（口述・症例報告・ポスター）の演者の方は、閉会式への参加をお願いいたします。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="day-section">
+        <div class="day-header">
+            <div class="day-label">CHAIRPERSON</div>
+            <h2 class="day-title">座長の皆様へのご案内</h2>
+            <p class="day-subtitle">
+                口述演題・ポスター演題の座長の皆様は、以下をご確認ください。
+            </p>
+        </div>
+
+        <div class="program-grid">
+            <div class="session">
+                <h2>受付について</h2>
+                <p class="title">担当セッションの1時間前まで</p>
+                <ul class="speaker-list">
+                    <li>事前に本学会への参加登録をお願いいたします。</li>
+                    <li>当日ご来場の際に、参加受付時に座長である旨をお伝えください。</li>
+                    <li>受付場所は、2階グランドホール前のホワイエです。</li>
+                    <li>ご担当セッションの1時間前までに受付をお済ませください。</li>
+                </ul>
+            </div>
+
+            <div class="session">
+                <h2>不測の事態について</h2>
+                <p class="title">速やかに受付までご連絡ください</p>
+                <p class="lecturer">
+                    不測の事態により座長の職務が遂行不可能であると判断された場合は、速やかに受付までご連絡ください。
+                </p>
+            </div>
+
+            <div class="session">
+                <h2>口述演題の進行</h2>
+                <p class="title">開始10分前までに次座長席へ</p>
+                <ul class="speaker-list">
+                    <li>各セッションの時間は50分間です。</li>
+                    <li>担当セッション開始10分前までに「次座長席」へお越しください。</li>
+                    <li>進行は座長に一任しますが、時間内に終了できるようご配慮ください。</li>
+                    <li>発表内容が抄録と大幅に異なる場合は、その場でご指摘のうえ、建設的な進行をお願いいたします。</li>
+                </ul>
+            </div>
+
+            <div class="session">
+                <h2>ポスター演題の進行</h2>
+                <p class="title">開始10分前までに担当ポスター付近へ</p>
+                <ul class="speaker-list">
+                    <li>各セッションの時間は50分間です。</li>
+                    <li>担当セッション開始10分前までに「担当ポスター付近」へお越しください。</li>
+                    <li>個別発表後、演者と座長との質疑応答を2分間実施してください。</li>
+                    <li>すべての質疑応答終了後、演者と聴衆者との自由討論を実施してください。</li>
+                    <li>座長は演者と参加者の積極的な議論を促していただけますと幸いです。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="day-section">
+        <div class="day-header">
+            <div class="day-label">ORAL PRESENTATION</div>
+            <h2 class="day-title">口述発表の皆様へのご案内</h2>
+            <p class="day-subtitle">
+                PC受付、スライド作成、発表時の注意事項についてご確認ください。
+            </p>
+        </div>
+
+        <div class="program-grid">
+            <div class="session full">
+                <h2>PC受付・データ提出時間</h2>
+                <div class="table-wrap">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>場所</th>
+                                <td>久留米シティプラザ 2階 グランドホール前ホワイエ（PC受付）</td>
+                            </tr>
+                            <tr>
+                                <th>日時</th>
+                                <td>令和8年8月30日（日）8時20分〜14時30分</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="session">
+                <h2>データ提出について</h2>
+                <p class="title">セッション開始1時間前まで</p>
+                <ul class="speaker-list">
+                    <li>参加受付後、PC受付にて発表データの確認と提出をお願いいたします。</li>
+                    <li>ご自身のセッション開始1時間前までにPC受付をお済ませください。</li>
+                    <li>発表データはUSB記録媒体にてご持参ください。</li>
+                    <li>USB記録媒体には、当日発表するデータ以外は入れないようお願いいたします。</li>
+                    <li>USB記録媒体は事前にウイルスチェックを行ってください。</li>
+                </ul>
+            </div>
+
+            <div class="session">
+                <h2>PC環境について</h2>
+                <p class="title">学会事務局で用意するPCはWindowsです</p>
+                <ul class="speaker-list">
+                    <li>Mac OSの用意はございません。</li>
+                    <li>ご自身のパソコンを持ち込んでの発表はできません。</li>
+                    <li>発表者ツールは使用できません。</li>
+                    <li>不測の事態に備えて、必ずバックアップデータをご持参ください。</li>
+                </ul>
+            </div>
+
+            <div class="session">
+                <h2>ファイル名</h2>
+                <p class="title">「演題番号：氏名」</p>
+                <p class="lecturer">
+                    例：「O-01：氏名」など
+                </p>
+            </div>
+
+            <div class="session">
+                <h2>スライド作成</h2>
+                <p class="title">Windows版Microsoft PowerPoint 2007以上</p>
+                <ul class="speaker-list">
+                    <li>Mac OS版PowerPointで作成した場合、互換性が損なわれる可能性があります。</li>
+                    <li>事前にWindows PCで文字ずれ等の動作確認を行ってください。</li>
+                    <li>フォントはOS標準のものを使用してください。</li>
+                    <li>一部Office365のみで使える特殊なアニメーションは使用できません。</li>
+                </ul>
+            </div>
+
+            <div class="session">
+                <h2>動画・音声について</h2>
+                <p class="title">動画は使用可能、音声は使用不可</p>
+                <ul class="speaker-list">
+                    <li>動画を使用する場合は、動画のリンク切れにご注意ください。</li>
+                    <li>ご自身のパソコン以外でも正常に再生されることを事前に確認してください。</li>
+                    <li>動画が動かない場合がありますので、自己責任でお願いいたします。</li>
+                </ul>
+            </div>
+
+            <div class="session">
+                <h2>発表について</h2>
+                <p class="title">開始10分前までに次演者席へ</p>
+                <ul class="speaker-list">
+                    <li>発表演者はセッション開始10分前までに、会場左前方の「次演者席」にご着席ください。</li>
+                    <li>発表データの送り・戻しの操作は、演台にてご自身でお願いいたします。</li>
+                    <li>発表時間の厳守にご協力ください。</li>
+                    <li>演者変更がある場合は、発表時に自己申告してください。</li>
+                    <li>質疑応答は座長の指示に従ってください。</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="note-box">
+            ※PC受付ではデータ修正や編集を行うことはできません。学会PCにコピーしたデータは、本学会終了後に学会主催者側で責任を持って削除いたします。
+        </div>
+    </section>
+
+
+
+    <section class="day-section">
+        <div class="day-header">
+            <div class="day-label">POSTER PRESENTATION</div>
+            <h2 class="day-title">ポスター発表の皆様へのご案内</h2>
+            <p class="day-subtitle">
+                ポスター貼付・撤去、ポスター作成、発表時の注意事項についてご確認ください。
+            </p>
+        </div>
+
+        <div class="program-grid">
+            <div class="session full">
+                <h2>ポスター貼付・撤去の時間</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>日程</th>
+                                <th>ポスター貼付</th>
+                                <th>ポスター撤去</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>令和8年8月30日（日）</td>
+                                <td>8時20分〜10時30分</td>
+                                <td>15時40分〜16時30分</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="session">
+                <h2>ポスター貼付について</h2>
+                <ul class="speaker-list">
+                    <li>参加受付後、下記の指定時間内にポスター会場にて、ポスターの貼付をお願いいたします。</li>
+                    <li>ポスターパネルおよび貼付用の備品は、ポスター会場に用意しております。</li>
+                    <li>発表後、指定の時間内にポスターの撤去をお願いいたします。</li>
+                    <li>撤去時間を過ぎても撤去されない場合は、学会側で処分いたします。</li>
+                </ul>
+            </div>
+
+            <div class="session">
+                <h2>ポスター作成について</h2>
+                <ul class="speaker-list">
+                    <li>ポスター作成にあたって、個人情報、著作権、肖像権などの取り扱いには特にご注意ください。</li>
+                    <li>個人情報、著作権、肖像権などに関するトラブルにつきまして、学会運営側では責任を負いかねますため、各自で必ずご確認いただきますようお願いいたします。</li>
+                    <li>パネル左上の演題番号は学会運営側で用意いたします。</li>
+                    <li>ポスターパネルのサイズは縦180cm×横90cmです。下記のポスターサイズを参考にポスター作成をお願いいたします。</li>
+                </ul>
+            </div>
+
+            <div class="session full">
+                <h2>ポスターサイズ</h2>
+                <p class="title">ポスターパネル：縦180cm × 横90cm</p>
+
+                <div class="poster-image-wrap">
+                    <img src="" alt="ポスターサイズ：縦180cm、横90cm。上部20cmに演題番号と演題名、下部160cmに演題内容を掲示する図">
+                </div>
+
+                <ul class="speaker-list">
+                    <li>演題名に関するポスターは、演題番号横の掲示スペースに収まるように作成してください。</li>
+                    <li>なお、「演題タイトル、演者名、所属」が分かるように作成してください。</li>
+                    <li>演題内容に関するポスターは、パネルの掲示スペース内（横90cm×縦160cm）に収まるように作成してください。</li>
+                </ul>
+            </div>
+
+            <div class="session">
+                <h2>利益相反（COI）について</h2>
+                <p class="title">ポスター内の任意の箇所に記載してください</p>
+                <p class="lecturer">
+                    利益相反（COI）の有無に関わらず、その情報開示をお願いいたします。
+                </p>
+            </div>
+
+            <div class="session">
+                <h2>発表について</h2>
+                <ul class="speaker-list">
+                    <li>発表演者はセッション開始10分前には各自のポスターの前で待機してください。</li>
+                    <li>発表時間の厳守にご協力をお願いいたします。</li>
+                    <li>演者変更がある場合は、発表時に自己申告してください。</li>
+                    <li>質疑応答は座長の指示に従ってください。</li>
+                    <li>座長との質疑応答後も指定のセッション時間中はご自身のポスター前に立っていただき、聴衆者との自由討論をお願いいたします。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="day-section">
+        <div class="day-header">
+            <div class="day-label">COI DISCLOSURE</div>
+            <h2 class="day-title">利益相反（COI）開示のお願い</h2>
+            <p class="day-subtitle">
+                すべての発表において、利益相反（COI）の開示をお願いいたします。
+            </p>
+        </div>
+
+        <div class="program-grid">
+            <div class="session">
+                <h2>COI開示について</h2>
+                <p class="title">有無に関わらず開示をお願いいたします</p>
+                <p class="lecturer">
+                    利益相反（COI）の有無に関わらず、すべての発表ではその情報開示をお願いいたします。
+                </p>
+            </div>
+
+            <div class="session">
+                <h2>口述発表の場合</h2>
+                <p class="title">タイトルスライドの次に記載してください</p>
+                <p class="lecturer">
+                    タイトルスライドの次のスライドで「COIの開示」について記載してください。
+                </p>
+            </div>
+
+            <div class="session">
+                <h2>ポスター発表の場合</h2>
+                <p class="title">ポスター内の任意の箇所に記載してください</p>
+                <p class="lecturer">
+                    ポスター内の任意の箇所で「COIの開示」について記載してください。
+                </p>
+            </div>
+
+            <div class="session">
+                <h2>COI開示例</h2>
+                <p class="title">本学会HPよりダウンロード可能です</p>
+                <p class="lecturer">
+                    <a href="COIありスライドURL">COIありの場合の開示例はこちら</a><br>
+                    <a href="COIなしスライドURL">COIなしの場合の開示例はこちら</a>
+                </p>
+            </div>
+        </div>
+</section>
+
+
+
+</main>
+
+</body>
+</html>
